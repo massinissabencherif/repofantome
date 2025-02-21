@@ -1,0 +1,75 @@
+@use "../partials/variables" as *;
+@use "../partials/mixins" as m;
+
+.footer {
+    background-color: $gris;
+    padding: 1rem 0;
+    text-align: center;
+    width: 100%;
+    margin-top: auto;
+
+    &__inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 1rem;
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        gap: 1rem;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: var(--text-color, #333);
+        font-weight: bold;
+        transition: color 0.3s;
+
+        &:hover {
+            color: var(--primary-color, #007bff);
+        }
+    }
+
+    &__bottom {
+        margin-top: 1rem;
+        font-size: 0.875rem;
+        color: var(--text-muted, #666);
+    }
+}
+
+/* Structure de page pour que le footer soit toujours en bas */
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Assure que la page prend toute la hauteur */
+}
+
+.page__content {
+    flex: 1; /* Permet d'occuper l'espace disponible */
+}
+
+.page--homepage {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Assure que la page prend toute la hauteur */
+
+    .page__content {
+        flex: 1; /* Permet d'occuper l'espace disponible */
+    }
+
+    .footer {
+        margin-top: auto; /* Pousse le footer vers le bas */
+    }
+}
+
+

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groupe</title>
+    <link rel="stylesheet" href="./dist/framework-esgi.css" />
+    <script src="./dist/framework-esgi.js"></script>
+    <script src="./src/js/modal.js"></script>
+    <script src="./dist/framework-esgi.js"></script>
+    <script src="./src/js/theme.js"></script>
+</head>
+<body class="page page--group">
+    <!-- HEADER DU GROUPE -->
+    <main class="main-content">
+        <section class="group">
+            <div class="group__header">
+                <h1 class="group__title">Nom du Groupe</h1>
+            </div>
+            <div class="group__actions">
+                <label for="group__file" class="button button--primary">
+                    Ajouter une photo
+                </label>
+                <input type="file" id="group__file" class="group__file" accept="image/png, image/jpeg">
+                
+                <!-- Bouton de retour ajouté -->
+                <button onclick="history.back();" class="button button--secondary">Retour</button>
+            </div>
+            <button id="toggle-theme">🌙 Mode Sombre</button>
+        </section>
+        <!-- GALERIE DES PHOTOS -->
+        <section class="gallery">
+            <h2 class="gallery__title">Galerie</h2>
+            <div class="gallery__grid">
+                <div class="gallery__item">
+                    <img src="image1.jpg" alt="Photo du groupe" class="gallery__image">
+                    <div class="gallery__dropdown">
+                        <select class="gallery__select">
+                            <option value="private" selected>Privé</option>
+                            <option value="public">Public</option>
+                        </select>
+                    </div>
+                    <div class="gallery__actions">
+                        <button class="button button--danger">Supprimer</button>
+                    </div>
+                </div>            
+        </section>
+        <!-- LISTE DES MEMBRES -->
+        <section class="members">
+            <h2 class="members__title">Membres du groupe</h2>
+            <ul class="members__list" id="membersList">
+                <li class="members__item">
+                    <span class="members__name">Utilisateur 1</span>
+                    <select class="members__role">
+                        <option value="admin">Admin</option>
+                        <option value="editor">Editeur</option>
+                        <option value="viewer">Viewer</option>
+                    </select>
+                    <button class="button button--danger remove-member">Supprimer</button>
+                </li>
+                <li class="members__item">
+                    <span class="members__name">Utilisateur 2</span>
+                    <select class="members__role">
+                        <option value="admin">Admin</option>
+                        <option value="editor" selected>Editeur</option>
+                        <option value="viewer">Viewer</option>
+                    </select>
+                    <button class="button button--danger remove-member">Supprimer</button>
+                </li>
+            </ul>
+            <br>
+            <button class="button button--primary" id="addMemberBtn">Ajouter un membre</button>
+        </section>        
+    </main>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__inner">
+            <nav class="footer__nav">
+                <ul class="footer__list">
+                    <li><a href="/about" class="footer__link">À propos de nous</a></li>
+                    <li><a href="/services" class="footer__link">Services</a></li>
+                    <li><a href="/contact" class="footer__link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer__bottom">
+            <p>&copy; LUKA & MASSI. Tous droits réservés</p>
+        </div>
+    </footer>
+
+</body>
+</html>

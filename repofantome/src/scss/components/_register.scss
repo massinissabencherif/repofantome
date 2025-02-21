@@ -1,0 +1,21 @@
+@use "../partials/variables" as *;
+
+.page--register {
+    background-color: $jaune;
+
+    .register {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 80vh;
+
+        .form {
+            max-width: 400px;
+            width: 100%;
+        }
+
+        &__stroke {
+            stroke-width: 3%;
+        }
+    }
+}
